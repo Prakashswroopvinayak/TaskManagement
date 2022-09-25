@@ -1,0 +1,49 @@
+<!-- <p [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+    <p [ngClass]="{'strike': !todo.active}">{{todo.DeadLine}}</p>
+    <p [ngClass]="{'strike': !todo.active}">{{todo.priority}}</p> -->
+<!-- <table>
+      <tr >
+        <td [ngClass]="{'strike': !todo.active}">{{todo.desc}} </td>
+        <td  [ngClass]="{'strike': !todo.active}">{{todo.DeadLine}} </td>
+          <td  [ngClass]="{'strike': !todo.active}">{{todo.priority}} </td>
+      </tr>
+    </table> -->
+<!-- <div>
+   
+   
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col"> Status</th>
+        <th scope="col"> title</th>
+        <th scope="col">Description </th>
+        <th scope="col"> DeadLine</th>
+        <th scope="col">Priority</th>
+        <th scope="col"> Delete Task</th>
+      </tr>
+      </thead>
+      <tbody> -->
+
+
+
+
+<td style="color:purple" [ngClass]="{'strike': !todo.active}">{{todo.title}}</td>
+<td [ngClass]="{'strike': !todo.active}">{{todo.desc}} </td>
+<td [ngClass]="{'strike': !todo.active}">{{todo.DeadLine}} </td>
+<td [ngClass]="{'strike': !todo.active}">{{todo.times}} </td>
+<td [ngClass]="{'strike': !todo.active}">{{todo.priority}} </td>
+<td>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckBoxClick(todo)"
+      [checked]="!todo.active">
+    <label class="form-check-label" for="todo{{i}}">Done</label>
+  </div>
+</td>
+<td><button class="btn btn-danger" (click)="onClick(todo)"><i class="fa fa-trash"></i></button>&nbsp;
+<button class="btn btn-primary" (click)="onEdit(todo)"><i class="fa fa-pencil"></i></button></td>
+
+<!-- </tbody>
+    </table>
+    
+    
+</div>   -->
